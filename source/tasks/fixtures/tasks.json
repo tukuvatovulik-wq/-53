@@ -1,0 +1,22 @@
+[
+  {
+    "model": "tasks.task",
+    "pk": 1,
+    "fields": {
+      "description": "Подготовить домашнее задание",
+      "details": "Прочитать условие.\nВыполнить задания по порядку.\nПроверить результат.",
+      "status": "new",
+      "due_date": null
+    }
+  },
+  {
+    "model": "tasks.task",
+    "pk": 2,
+    "fields": {
+      "description": "Повторить Python",
+      "details": "Повторить модели Django и маршруты URL.",
+      "status": "in_progress",
+      "due_date": null
+    }
+  }
+]

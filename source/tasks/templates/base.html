@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Список TODO{% endblock %}</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 30px auto; padding: 0 16px; color: #222; }
+        nav { display: flex; gap: 16px; padding: 12px 0; margin-bottom: 24px; border-bottom: 1px solid #ddd; }
+        a { color: #1459a6; } .task { padding: 14px; margin: 12px 0; border: 1px solid #ddd; border-radius: 8px; }
+        label { display: block; margin-top: 12px; } input, textarea, select { box-sizing: border-box; width: 100%; padding: 8px; margin-top: 4px; }
+        button { margin-top: 16px; padding: 9px 14px; cursor: pointer; } .details { white-space: pre-wrap; } .errorlist { color: #b00020; }
+    </style>
+</head>
+<body>
+<nav><a href="{% url 'tasks:list' %}">Главная</a><a href="{% url 'tasks:create' %}">Добавить задачу</a></nav>
+<main>{% block content %}{% endblock %}</main>
+</body>
+</html>

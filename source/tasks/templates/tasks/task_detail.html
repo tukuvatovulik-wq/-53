@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Задача №{{ task.pk }}{% endblock %}
+{% block content %}
+<h1>Задача №{{ task.pk }}</h1>
+<p><strong>Описание:</strong> {{ task.description }}</p>
+<p><strong>Статус:</strong> {{ task.get_status_display }}</p>
+<p><strong>Дата выполнения:</strong> {{ task.due_date|default:"Не указана" }}</p>
+<h2>Подробное описание</h2>
+<div class="details">{{ task.details }}</div>
+<p><a href="{% url 'tasks:list' %}">Вернуться к списку</a></p>
+{% endblock %}
